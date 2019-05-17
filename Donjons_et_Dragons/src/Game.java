@@ -24,8 +24,13 @@ public class Game {
 			Scanner capture = new Scanner(System.in);
 			type = capture.next();
 			
-			System.out.println(type);
-
+			if(type == "Guerrier") {
+				System.out.println("Vous avez choisi Guerrier!");
+			} else if (type == "Magicien"){
+				System.out.println("Vous avez choisi Magicien!");
+			} else {
+				System.out.println("Vous devez choisir un type de personnage!");
+			}
 		}
 		
 		System.out.println("Niveau de vie: " + force + "Vous etes mort!");
