@@ -8,6 +8,7 @@ public class Game {
 		Random r = new Random();
 		String nom = ("");
 		String image = ("");
+		String type = ("");
 		int min = 5;
 		int max = 10;
 		int life = r.nextInt(max - min + 1) + min;
@@ -21,8 +22,9 @@ public class Game {
 			
 			System.out.println("Choisissez un type de personnage: Guerrier ou Magicien  ");
 			Scanner capture = new Scanner(System.in);
+			type = capture.next();
 			
-			System.out.println(capture.nextInt());
+			System.out.println(type);
 
 		}
 		
