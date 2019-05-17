@@ -9,6 +9,8 @@ public class Game {
 		String nom = ("");
 		String image = ("");
 		String type = ("");
+		String warrior = ("Guerrier");
+		String magician = ("Magicien");
 		int min = 5;
 		int max = 10;
 		int life = r.nextInt(max - min + 1) + min;
@@ -22,11 +24,11 @@ public class Game {
 			
 			System.out.println("Choisissez un type de personnage: Guerrier ou Magicien  ");
 			Scanner capture = new Scanner(System.in);
-			type = capture.next();
+			type = capture.nextLine();
 			
-			if(type == "Guerrier") {
+			if(type == warrior) {
 				System.out.println("Vous avez choisi Guerrier!");
-			} else if (type == "Magicien"){
+			} else if (type == magician){
 				System.out.println("Vous avez choisi Magicien!");
 			} else {
 				System.out.println("Vous devez choisir un type de personnage!");
