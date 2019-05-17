@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
 
@@ -17,6 +18,11 @@ public class Game {
 		System.out.println("Niveau de vie: " + force);
 		
 		while(life != mort) {
+			
+			System.out.println("Choisissez un type de personnage: Guerrier ou Magicien  ");
+			Scanner capture = new Scanner(System.in);
+			
+			System.out.println(capture.nextInt());
 
 		}
 		
