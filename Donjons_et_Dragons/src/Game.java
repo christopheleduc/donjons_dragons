@@ -1,14 +1,16 @@
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
+import java.lang.reflect.*;
+//import java.util.Random;
+//import java.util.Scanner;
 
 public class Game {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Random r = new Random();
-		String nom = ("");
-		String image = ("");
-		String type = ("");
+		String nom = null;
+		String image = null;
+		String type = null;
 		String warrior = ("Guerrier");
 		String magician = ("Magicien");
 		int verif = 0;
@@ -32,13 +34,18 @@ public class Game {
 					combatant_01.setType(type);
 					System.out.println("Vous avez choisi " + combatant_01.getType() + " !");
 					verif = 1;
-					return combatant_01;
+					System.out.println(combatant_01); //debug
+					combatant_01.Show(); // debug
+					//return;
 				} else if (type.equals(magician)){
 					Magician combatant_01 = new Magician();
 					combatant_01.setType(type);
 					System.out.println("Vous avez choisi " + combatant_01.getType() + " !");
 					verif = 1;
-					return combatant_01;
+					System.out.println(combatant_01); //debug
+					combatant_01.Show(); //debug
+					//Object get(combatant_01);
+					//return;
 				} else {
 					System.out.println("Vous devez choisir un type de personnage!");
 				}
@@ -54,9 +61,13 @@ public class Game {
 				if(nom.equals("")) {
 					System.out.println("Vous devez entrer un nom pour votre personnage!");
 				} else {
+
+					Warrior combatant_01 = new Warrior(nom, image, type);
 					//Object get(combatant_01);
-					combatant_01.setNom(nom);
+					//Object combatant_01.setNom(nom);
+
 					System.out.println("Vous avez choisi " + combatant_01.getNom() + " !");
+					combatant_01.Show();
 					verif = 1;
 				}
 		}

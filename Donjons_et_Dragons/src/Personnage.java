@@ -20,10 +20,16 @@ public class Personnage {
 
     // Constructeur par defaut
     public Personnage() {
-        this("Combatant", "combatant.png", warrior, life, force);
+        this("Conan", "warrior.png", warrior, life, force);
+        //this.nom = "Combatant" ;
     }
 
     // Constructeur avec arguments
+    public Personnage(String nom, String image, String type) {
+        this(nom, image, type, life, force);
+        //this.nom = "Combatant" ;
+    }
+
     public Personnage(String nom, String image, String type, int life, int force) {
         this.setNom(nom) ;
         this.setImage(image) ;
@@ -71,5 +77,14 @@ public class Personnage {
 
     public void setForce(int force) {
         this.force = force ;
+    }
+
+    // Methodes
+    public void Show() {
+        System.out.println(getNom()) ;
+        System.out.println(getImage()) ;
+        System.out.println(getType()) ;
+        System.out.println(getLife()) ;
+        System.out.println(getForce()) ;
     }
 }
