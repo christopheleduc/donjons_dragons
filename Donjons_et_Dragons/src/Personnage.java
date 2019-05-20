@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Personnage {
+public abstract class Personnage {
 
     // Variables de classe
 

@@ -1,5 +1,5 @@
 import java.util.*;
-import java.lang.reflect.*;
+//import java.lang.reflect.*;
 //import java.util.Random;
 //import java.util.Scanner;
 
@@ -23,6 +23,7 @@ public class Game {
 		//System.out.println("Niveau de vie: " + life);
 		//System.out.println("Niveau de vie: " + force);
 
+		Personnage combatant;
 		// Choix du type de personnage
 		while(verif != 1) {	
 			System.out.println("Choisissez un type de personnage: Guerrier ou Magicien  ");
@@ -30,20 +31,20 @@ public class Game {
 			type = capture.nextLine();
 			
 				if(type.equals(warrior)) {
-					Warrior combatant_01 = new Warrior();
-					combatant_01.setType(type);
-					System.out.println("Vous avez choisi " + combatant_01.getType() + " !");
+					combatant = new Warrior();
+					combatant.setType(type);
+					System.out.println("Vous avez choisi " + combatant.getType() + " !");
 					verif = 1;
-					System.out.println(combatant_01); //debug
-					combatant_01.Show(); // debug
+					System.out.println(combatant); //debug
+					combatant.Show(); // debug
 					//return;
 				} else if (type.equals(magician)){
-					Magician combatant_01 = new Magician();
-					combatant_01.setType(type);
-					System.out.println("Vous avez choisi " + combatant_01.getType() + " !");
+					combatant = new Magician();
+					combatant.setType(type);
+					System.out.println("Vous avez choisi " + combatant.getType() + " !");
 					verif = 1;
-					System.out.println(combatant_01); //debug
-					combatant_01.Show(); //debug
+					System.out.println(combatant); //debug
+					combatant.Show(); //debug
 					//Object get(combatant_01);
 					//return;
 				} else {

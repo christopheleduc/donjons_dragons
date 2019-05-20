@@ -1,10 +1,6 @@
 class Warrior extends Personnage {
 
-    // Variables de classe
-    public static Object combatant_01;
-    public static Object combatant_02;
-
-    // Variables d'instance
+   // Variables d'instance
 
     // Constructeur par defaut
     public Warrior() {
