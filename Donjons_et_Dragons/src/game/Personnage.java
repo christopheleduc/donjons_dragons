@@ -8,6 +8,7 @@ public abstract class Personnage {
     private static final int min = 5;
     private static final int max = 10;
     private static final int mort = 0;
+    private static int coups;
     protected static final Random r = new Random();
     protected static final String warrior = ("Guerrier");
     protected static final String magician = ("Magicien");
@@ -91,5 +92,11 @@ public abstract class Personnage {
 
     public void Damage(int damage) {
         this.life -= damage;
+    }
+
+    public int Attack(int adversMax, int adversMin) {
+        int coups = r.nextInt(adversMax - adversMin + 1) + adversMin ;
+        this.life -= coups;
+        return coups ;
     }
 }

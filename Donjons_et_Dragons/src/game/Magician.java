@@ -32,47 +32,53 @@ class  Magician extends Personnage {
     }
 
         // Accesseurs
-        public String getNom() {
-            return super.getNom() ;
-        }
+        // public String getNom() {
+        //     return super.getNom() ;
+        // }
     
-        public void setNom(String nom) {
-            super.setNom(nom) ;
-        }
+        // public void setNom(String nom) {
+        //     super.setNom(nom) ;
+        // }
     
-        public String getImage() {
-            return super.getImage() ;
-        }
+        // public String getImage() {
+        //     return super.getImage() ;
+        // }
     
-        public void setImage(String image) {
-            super.setImage(image); ;
-        }
+        // public void setImage(String image) {
+        //     super.setImage(image); ;
+        // }
     
-        public String getType() {
-            return super.getType() ;
-        }
+        // public String getType() {
+        //     return super.getType() ;
+        // }
     
-        public void setType(String type) {
-            super.setType(type) ;
-        }
+        // public void setType(String type) {
+        //     super.setType(type) ;
+        // }
     
-        public int getLife() {
-            return this.life ;
-        }
+        // public int getLife() {
+        //     return this.life ;
+        // }
     
-        public void setLife(int life) {
-            this.life = life ;
-        }
+        // public void setLife(int life) {
+        //     this.life = life ;
+        // }
     
-        public int getForce() {
-            return this.force ;
-        }
+        // public int getForce() {
+        //     return this.force ;
+        // }
     
-        public void setForce(int force) {
-            this.force = force ;
-        }
+        // public void setForce(int force) {
+        //     this.force = force ;
+        // }
 
     // Methodes
+    public int Attack(int adversMax, int adversMin) {
+        int coups = r.nextInt(adversMax - adversMin + 1) + adversMin ;
+        this.life -= coups;
+        return coups ;
+    }
+
     // public void Show() {
     //     super.Show() ;
     //     System.out.println(getNom()) ;

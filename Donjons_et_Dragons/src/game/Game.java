@@ -22,6 +22,7 @@ public class Game {
 		int max = 10;
 		int life = r.nextInt(max - min + 1) + min;
 		int force = r.nextInt(max - min + 1) + min;
+		int attack;
 		int mort = 0;
 		//ArrayList attributs = new ArrayList<String>();
 		Scanner capture = new Scanner(System.in);
@@ -129,22 +130,29 @@ public class Game {
 		//combattant.Show(); //debug
 		
 		// Routine Vie/Mort
-		while(combattant.getLife() != mort) {
+		while(combattant.getLife() >= mort) {
 
 			// Affiche la force et la vie
-			System.out.println("Points d'attaque: [" + combattant.getForce() + "]");
-			System.out.println("Niveau de vie: [" + combattant.getLife() + "]");
+			System.out.println("Vos points d'attaque: [" + combattant.getForce() + "]");
+			System.out.println("Votre niveau de vie: [" + combattant.getLife() + "]");
 			// Simule un combat
 			System.out.println("Combatez !  ");
 			Scanner tour = new Scanner(System.in);
 			type = tour.next();
 			System.out.println("Votre attaque: " + type);
+			//attack = r.nextInt(combattant.getForce() - min + 1) + min;
 			//life = life - 1;
-			combattant.Damage(1);
+			//combattant.Damage(1);
+			System.out.println("Votre attaque: " + adversaire.Attack(combattant.getForce(), 1));
+			System.out.println("Votre adversaire: ");
+			adversaire.Show();
+			System.out.println("La replique: " + combattant.Attack(adversaire.getForce(), 1));
+			//combattant.Attack();
 			
 		}
 		
-		System.out.println("Niveau de vie: [" + life + "] Vous etes mort!");
+		System.out.println("Votre niveau de vie: [" + combattant.getLife() + "] Vous etes mort!");
+		System.out.println("Celui de votre adversaire: [" + adversaire.getLife() + "] Lui aussi!");
 		capture.close();
 		
 	}
