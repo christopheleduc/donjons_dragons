@@ -56,21 +56,21 @@ class  Magician extends Personnage {
         //     super.setType(type) ;
         // }
     
-        // public int getLife() {
-        //     return this.life ;
-        // }
+        public int getLife() {
+            return this.life ;
+        }
     
-        // public void setLife(int life) {
-        //     this.life = life ;
-        // }
+        public void setLife(int life) {
+            this.life = life ;
+        }
     
-        // public int getForce() {
-        //     return this.force ;
-        // }
+        public int getForce() {
+            return this.force ;
+        }
     
-        // public void setForce(int force) {
-        //     this.force = force ;
-        // }
+        public void setForce(int force) {
+            this.force = force ;
+        }
 
     // Methodes
     public int Attack(int adversMax, int adversMin) {
