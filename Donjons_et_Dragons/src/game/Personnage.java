@@ -9,8 +9,8 @@ public abstract class Personnage {
     private static final int max = 10;
     private static final int mort = 0;
     //private static int coups;
-    private static int arme;
-    private static int bouclier;
+    //private static int arme;
+    //private static int bouclier;
     protected static final Random r = new Random();
     protected static final String warrior = ("Guerrier");
     protected static final String magician = ("Magicien");
