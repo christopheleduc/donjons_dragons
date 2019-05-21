@@ -97,6 +97,16 @@ public class Game {
 			if(adversaire.getLife() > constant.getMort() ){
 				System.out.println(constant.getLrp() + combattant.Attack(adversaire.getForce(), 1));
 				System.out.println(constant.getLine());
+				if(combattant.getLife() <= constant.getMort()){
+					System.out.println(constant.getPtvi() + combattant.getLife() + constant.getCrfx());
+					System.out.println(constant.getCvad() + adversaire.getLife() + constant.getCrfx());
+					System.out.println(constant.getVem());
+					System.out.println(constant.getVap());
+					System.out.println(constant.getLine());
+					System.out.println(constant.getLine());
+					capture.close();
+					break;
+				}
 				//combattant.Attack();
 			} else {
 				System.out.println(constant.getPtvi() + combattant.getLife() + constant.getCrfx());
@@ -105,7 +115,8 @@ public class Game {
 				System.out.println(constant.getLine());
 				System.out.println(constant.getLine());
 				capture.close();
-				return;
+				break;
+				//return;
 			}	
 		}
 		capture.close();	

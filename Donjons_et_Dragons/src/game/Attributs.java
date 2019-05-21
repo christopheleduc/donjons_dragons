@@ -33,6 +33,8 @@ public class Attributs {
     private static final String fr_pointsAdv = "Celui de votre adversaire: [";
     private static final String fr_dead = "] Qui est mort!";
     private static final String fr_win = "Vous etes vainqueur !!!!!!!!!!!!!";
+    private static final String fr_defat = "Vous avez perdu !!!!!!!!!!!!!";
+    private static final String fr_youDead = "Vous etes mort!";
     // Univers
     private static final String vs = "                VS";
     private static final String line = "*****************************************************";
@@ -170,6 +172,14 @@ public class Attributs {
 
         public String getVev() {
             return this.fr_win ;
+        }
+
+        public String getVap() {
+            return this.fr_defat ;
+        }
+
+        public String getVem() {
+            return this.fr_youDead ;
         }
 
 }
