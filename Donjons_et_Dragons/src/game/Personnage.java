@@ -8,7 +8,9 @@ public abstract class Personnage {
     private static final int min = 5;
     private static final int max = 10;
     private static final int mort = 0;
-    private static int coups;
+    //private static int coups;
+    private static int arme;
+    private static int bouclier;
     protected static final Random r = new Random();
     protected static final String warrior = ("Guerrier");
     protected static final String magician = ("Magicien");
@@ -81,13 +83,21 @@ public abstract class Personnage {
         this.force = force ;
     }
 
+    public int getMort() {
+        return this.mort ;
+    }
+
     // Methodes
     public void Show() {
-        System.out.println(getNom()) ;
-        System.out.println(getImage()) ;
-        System.out.println(getType()) ;
-        System.out.println(getLife()) ;
-        System.out.println(getForce()) ;
+        System.out.println("*****************************************************");
+        System.out.println("*****************************************************");
+        System.out.println("* Nom: " + getNom() + "                                        *") ;
+        System.out.println("* Image: " + getImage() + "                                  *") ;
+        System.out.println("* Type: " + getType() + "                                    *") ;
+        System.out.println("* Vie: " + getLife() + "                                            *") ;
+        System.out.println("* Force: " + getForce() + "                                          *") ;
+        System.out.println("*****************************************************");
+        System.out.println("*****************************************************");
     }
 
     public void Damage(int damage) {
