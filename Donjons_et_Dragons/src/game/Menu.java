@@ -1,6 +1,7 @@
 package game;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,9 @@ public class Menu {
     private static Attributs constant = new Attributs();
     private static Personnage combattant=null;
     private static Personnage adversaire=null;
+    private static Epee epee=null;
+    private static Electrocut sort=null;
+    private ArrayList list = new ArrayList<Object>();
 
 
     // Choix du type de personnage
@@ -42,19 +46,18 @@ public class Menu {
 
     }
 
+    // Choix du nom du personnage
     public void nameChoice() {
-
-        		// Choix du nom du personnage
+        
 		while(verif != 1) {	
 			System.out.println(constant.getPnc());
-			// Scanner capture = new Scanner(System.in);
 			nom = capture.nextLine();
 				if(nom.equals("")) {
 					System.out.println(constant.getPnd());
 				} else {
 					attributs.put("nom", nom);
 					System.out.println(constant.getChic() + attributs.get("nom") + constant.getExc());
-					System.out.println(attributs.toString());// debug
+					//System.out.println(attributs.toString());// debug
 					verif = 1;
 				}
 		}
@@ -68,16 +71,40 @@ public class Menu {
 
             if(attributs.containsKey("type") && attributs.containsKey("nom") && attributs.get("type").equals(constant.getWarrior())) {
                 combattant = new Warrior(attributs.get("nom"), "warrior.png", attributs.get("type")) ; //On instancie le joueur
+                epee = new Epee(); //On instancie l'epée
+                list.add(epee.getName()); // Ajoute le nom de l'epee dans la list
+                list.add(epee.getIsactive()); // Ajoute si l'epee est active dans la list
+                list.add(epee.getForce()); // Ajoute les points d'attak de l'epee dans la list
+                //epee.setIsactive(true); //test
                 adversaire = new Magician() ; //On instancie l'ordinateur
+                sort = new Electrocut(); //On instancie le sort
+                list.add(sort.getName()); // Ajoute le nom de l'epee dans la list
+                list.add(sort.getIsactive()); // Ajoute si l'epee est active dans la list
+                list.add(sort.getForce()); // Ajoute les points d'attak de l'epee dans la list
+                //sort.setIsactive(false); // test
                 combattant.Show(); //debug
+                epee.Show(); //debug: Votre arme...
                 System.out.println(constant.getVs()); //debug
                 adversaire.Show(); //debug
+                sort.Show(); //debug: Son arme...
+                System.out.println(list);// Test : affiche tous les elements de la liste
             } else if (attributs.containsKey("type") && attributs.containsKey("nom") && attributs.get("type").equals(constant.getMagician())){
                 combattant = new Magician(attributs.get("nom"), "magician.png", attributs.get("type")) ; //On instancie le joueur
+                sort = new Electrocut(); //On instancie le sort
+                list.add(sort.getName()); // Ajoute le nom de l'epee dans la list
+                list.add(sort.getIsactive()); // Ajoute si l'epee est active dans la list
+                list.add(sort.getForce()); // Ajoute les points d'attak de l'epee dans la list
                 adversaire = new Warrior() ; //On instancie l'ordinateur
+                epee = new Epee(); //On instancie l'epée
+                list.add(epee.getName()); // Ajoute le nom de l'epee dans la list
+                list.add(epee.getIsactive()); // Ajoute si l'epee est active dans la list
+                list.add(epee.getForce()); // Ajoute les points d'attak de l'epee dans la list
                 combattant.Show(); //debug
+                sort.Show(); //debug: Votre arme...
                 System.out.println(constant.getVs()); //debug
                 adversaire.Show(); //debug
+                epee.Show(); //debug: Son arme...
+                System.out.println(list);// Test : affiche tous les elements de la liste
             } 
     
             attributs.clear();

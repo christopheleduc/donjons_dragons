@@ -1,23 +1,25 @@
 package game;
 
-public class Electrocut extends Sort{
+// import java.util.Random;
 
-    public String name() {
-        return ("Feu de Dieu");
+public class Electrocut extends Arme{
 
+    // Variables d'instance
+    private static final String name = "Eclair";
+
+    // Variables de classe
+
+    // Constructeurs avec arguments
+    public Electrocut() {
+        super("Eclair") ;
     }
     
-    public void special() {
-
+    public String name() {
+        return ("Eclair");
     }
 
-    public int getForce() {
-        return 0;
-
-    }
-
-    public boolean isActive() {
-        return false;
-
+    // Accesseurs
+    public void setName() {
+        super.setName(name) ;
     }
 }

@@ -2,22 +2,18 @@ package game;
 
 public class Epee extends Arme{
 
-    public String name() {
-        return ("Excalibur");
-
-    }
+    // Variables d'instance
+    private static final String name = "Excalibur";
     
-    public void special() {
+    // Variables de classe
 
+    // Constructeur par defaut
+    public Epee() {
+        super(name) ;
     }
 
+    // Accesseurs
     public int getForce() {
-        return 0;
-
-    }
-
-    public boolean isActive() {
-        return false;
-
+        return super.getForce() ;
     }
 }

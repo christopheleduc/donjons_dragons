@@ -20,7 +20,6 @@ class  Magician extends Personnage {
     // Constructeur avec arguments
     public Magician(String nom, String image, String type) {
         this(nom, image, type, life, force);
-        //this.nom = "Combatant" ;
     }
 
     public Magician(String nom, String image, String type, int life, int force) {
@@ -31,31 +30,6 @@ class  Magician extends Personnage {
         this.setForce(force) ;
     }
 
-        // Accesseurs
-        // public String getNom() {
-        //     return super.getNom() ;
-        // }
-    
-        // public void setNom(String nom) {
-        //     super.setNom(nom) ;
-        // }
-    
-        // public String getImage() {
-        //     return super.getImage() ;
-        // }
-    
-        // public void setImage(String image) {
-        //     super.setImage(image); ;
-        // }
-    
-        // public String getType() {
-        //     return super.getType() ;
-        // }
-    
-        // public void setType(String type) {
-        //     super.setType(type) ;
-        // }
-    
         public int getLife() {
             return this.life ;
         }
@@ -78,18 +52,4 @@ class  Magician extends Personnage {
         this.life -= coups;
         return coups ;
     }
-
-    // public void Show() {
-    //     super.Show() ;
-    //     System.out.println(getNom()) ;
-    //     System.out.println(getImage()) ;
-    //     System.out.println(getType()) ;
-    //     System.out.println(getLife()) ;
-    //     System.out.println(getForce()) ;
-    // }
-
-    // public void Damage(int damage) {
-    //     super.Damage() ;
-    // }
-
 }
