@@ -14,7 +14,8 @@ public class Game {
 				pass = 1;
 			} catch (NoTypeExeption e) {
 				pass = 0;
-				e.printStackTrace();
+				System.out.println(e);
+				// e.printStackTrace();
 			}
 		}
 
