@@ -3,7 +3,9 @@ package game;
 
 public class Attributs {
 
+    // ***********************
     // Variables de classe
+    // ***********************
     private static final int warLifeMin = 5;
     private static final int warLifeMax = 10;
     private static final int warForceMin = 5;

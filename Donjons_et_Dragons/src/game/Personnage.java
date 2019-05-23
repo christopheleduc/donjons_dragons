@@ -4,7 +4,9 @@ import java.util.Random;
 
 public abstract class Personnage {
 
+    // ***********************
     // Variables de classe
+    // ***********************
     private static final int min = 5;
     private static final int max = 10;
     private static final int mort = 0;
@@ -14,17 +16,23 @@ public abstract class Personnage {
     protected static int life = r.nextInt(max - min + 1) + min;
     protected static int force = r.nextInt(max - min + 1) + min;
 
+    // ********************
     // Variables d'instance
+    // ********************
     private String nom = (null);
     private String image = (null);
     private String type = (null);
 
+    // ***********************
     // Constructeur par defaut
+    // ***********************
     public Personnage() {
         this("Conan", "conan.png", warrior, life, force);
     }
 
-    // Constructeur avec arguments
+    // ****************************
+    // Constructeurs avec arguments
+    // ****************************
     public Personnage(String nom, String image, String type) {
         this(nom, image, type, life, force);
     }

@@ -18,13 +18,15 @@ public class Menu {
     private static Personnage adversaire=null;
     private static Epee epee=null;
     private static Electrocut sort=null;
+    private static String [] typesTab = {"Guerrier", "Magicien"};
     private ArrayList list = new ArrayList<Object>();
 
 
     // Choix du type de personnage
-    public void persoChoice() {
+    public void persoChoice() throws NoTypeExeption {
 
         while(verif != 1) {	
+        
 			System.out.println(constant.getPc());
 			//Scanner capture = new Scanner(System.in);
 			type = capture.nextLine();
@@ -38,7 +40,25 @@ public class Menu {
 					System.out.println(constant.getPcy() + attributs.get("type") + constant.getExc());
 					verif = 1;					
 				} else {
-					System.out.println(constant.getPdev());
+                    // Gestion des exeptions
+                    // try{
+                    //     System.out.println( typesTab[2]); // on provoque une erreur
+                    //     //System.out.println("Vous devez choisir entre " + typesTab[0] + " et " + typesTab[1] + " !!!");
+                    //     throw new NoTypeExeption();
+                    //     //System.out.println(constant.getPdev());
+                    // } catch(ArrayIndexOutOfBoundsException e) {
+                    //     System.out.println("Vous devez choisir entre " + typesTab[0] + " et " + typesTab[1] + " !!!");
+                    //     //System.out.println(constant.getPdev());
+                    //     //e.printStackTrace();
+                    // } finally {
+                    //     System.out.println("La compétance devrait EXCEPTIONS etre validée !");
+                    // }
+                        //System.out.println("Vous devez choisir entre " + typesTab[0] + " et " + typesTab[1] + " !!!");
+                        verif = 0;
+                        throw new NoTypeExeption();
+                        //System.out.println(constant.getPdev());
+                  
+
 				}
 		}
 
@@ -70,41 +90,63 @@ public class Menu {
         public void playersInstance() {
 
             if(attributs.containsKey("type") && attributs.containsKey("nom") && attributs.get("type").equals(constant.getWarrior())) {
+
                 combattant = new Warrior(attributs.get("nom"), "warrior.png", attributs.get("type")) ; //On instancie le joueur
                 epee = new Epee(); //On instancie l'epée
-                list.add(epee.getName()); // Ajoute le nom de l'epee dans la list
-                list.add(epee.getIsactive()); // Ajoute si l'epee est active dans la list
-                list.add(epee.getForce()); // Ajoute les points d'attak de l'epee dans la list
+
+                list.add(epee.getType()); // Ajoute le type de l'arme dans la list
+                list.add(epee.getName()); // Ajoute le nom de l'arme dans la list
+                list.add(epee.getIsactive()); // Ajoute si l'arme est active dans la list
+                list.add(epee.getForce()); // Ajoute les points d'attak de l'arme dans la list
                 //epee.setIsactive(true); //test
+
                 adversaire = new Magician() ; //On instancie l'ordinateur
                 sort = new Electrocut(); //On instancie le sort
-                list.add(sort.getName()); // Ajoute le nom de l'epee dans la list
-                list.add(sort.getIsactive()); // Ajoute si l'epee est active dans la list
-                list.add(sort.getForce()); // Ajoute les points d'attak de l'epee dans la list
+
+                list.add(sort.getType()); // Ajoute le type de l'arme dans la list
+                list.add(sort.getName()); // Ajoute le nom de l'arme dans la list
+                list.add(sort.getIsactive()); // Ajoute si l'arme est active dans la list
+                list.add(sort.getForce()); // Ajoute les points d'attak de l'arme dans la list
+
                 //sort.setIsactive(false); // test
                 combattant.Show(); //debug
                 epee.Show(); //debug: Votre arme...
+
                 System.out.println(constant.getVs()); //debug
+
                 adversaire.Show(); //debug
                 sort.Show(); //debug: Son arme...
+                
                 System.out.println(list);// Test : affiche tous les elements de la liste
+
             } else if (attributs.containsKey("type") && attributs.containsKey("nom") && attributs.get("type").equals(constant.getMagician())){
+
                 combattant = new Magician(attributs.get("nom"), "magician.png", attributs.get("type")) ; //On instancie le joueur
                 sort = new Electrocut(); //On instancie le sort
-                list.add(sort.getName()); // Ajoute le nom de l'epee dans la list
-                list.add(sort.getIsactive()); // Ajoute si l'epee est active dans la list
-                list.add(sort.getForce()); // Ajoute les points d'attak de l'epee dans la list
+
+                list.add(sort.getType()); // Ajoute le type de l'arme dans la list
+                list.add(sort.getName()); // Ajoute le nom de l'arme dans la list
+                list.add(sort.getIsactive()); // Ajoute si l'arme est active dans la list
+                list.add(sort.getForce()); // Ajoute les points d'attak de l'arme dans la list
+
                 adversaire = new Warrior() ; //On instancie l'ordinateur
                 epee = new Epee(); //On instancie l'epée
-                list.add(epee.getName()); // Ajoute le nom de l'epee dans la list
-                list.add(epee.getIsactive()); // Ajoute si l'epee est active dans la list
-                list.add(epee.getForce()); // Ajoute les points d'attak de l'epee dans la list
+
+                list.add(epee.getType()); // Ajoute le type de l'arme dans la list
+                list.add(epee.getName()); // Ajoute le nom de l'arme dans la list
+                list.add(epee.getIsactive()); // Ajoute si l'arme est active dans la list
+                list.add(epee.getForce()); // Ajoute les points d'attak de l'arme dans la list
+
                 combattant.Show(); //debug
                 sort.Show(); //debug: Votre arme...
+
                 System.out.println(constant.getVs()); //debug
+
                 adversaire.Show(); //debug
                 epee.Show(); //debug: Son arme...
+
                 System.out.println(list);// Test : affiche tous les elements de la liste
+
             } 
     
             attributs.clear();
