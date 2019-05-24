@@ -5,14 +5,14 @@ public class Epee extends Arme{
     // ********************
     // Variables d'instance
     // ********************
-    private static final String type = "Epee";
-    private static final String name = "Excalibur";
+    private final String type = "Epee";
+    private String name = "Excalibur";
 
     // ***********************
     // Constructeur par defaut
     // ***********************
     public Epee() {
-        super(name, true) ;
+        super("Excalibur", true) ;
     }
 
     // **********

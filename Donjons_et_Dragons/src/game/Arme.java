@@ -7,9 +7,9 @@ public abstract class Arme {
     // ***********************
     // Variables de classe
     // ***********************
-    private final int min = 2;
-    private final int max = 5;
-    private static final Random r = new Random();
+    private int min = 2;
+    private int max = 5;
+    private final Random r = new Random();
     private int damages = r.nextInt(max - min + 1) + min;
     private boolean isactive = false;
 

@@ -7,14 +7,14 @@ public class Electrocut extends Arme{
     // ********************
     // Variables d'instance
     // ********************
-    private static final String type = "Sort";
-    private static final String name = "Eclair";
+    private final String type = "Sort";
+    private String name = "Eclair";
 
     // ***********************
     // Constructeur par defaut
     // ***********************
     public Electrocut() {
-        super("Eclair") ;
+        super("Eclair", true) ;
     }
 
     // **********
