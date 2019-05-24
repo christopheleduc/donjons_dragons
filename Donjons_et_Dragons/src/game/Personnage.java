@@ -1,3 +1,20 @@
+/**
+ * Personnage est la Superclasse abstract qui définit les carracteristiques du joueur
+ * Cette classe est caractérisée par les informations suivantes :
+ * <ul>
+ * <li>min valeur minimum de la vie et de la force d'un personnage guerrier</li>
+ * <li>max valeur maximum de la vie et de la force d'un personnage guerrier</li>
+ * </ul>
+ * Personnage permet de calculer la force et la vie d'un joueur, 
+ * ainsi que de definir son nom et son type.
+ * </p>
+ * Les attributs min et max sont surchargés dans la class fille Magicien,
+ * tandis que la class fille Guerrier herite de toutes les carractéristiques de Personnage.
+ * </p>
+ * @author CryptoDox
+ * @version 1.0
+ */
+
 package game;
 
 import java.util.Random;
@@ -7,42 +24,85 @@ public abstract class Personnage {
     // ***********************
     // Variables de classe
     // ***********************
-    private static final int min = 5;
-    private static final int max = 10;
-    private static final int mort = 0;
-    protected static final Random r = new Random();
-    protected static final String warrior = ("Guerrier");
-    protected static final String magician = ("Magicien");
-    protected static int life = r.nextInt(max - min + 1) + min;
-    protected static int force = r.nextInt(max - min + 1) + min;
+    /** 
+     * Valeur min pour la vie et la force 
+     */
+    private int min = 5;
+    /** 
+     * Valeur max pour la vie et la force 
+     */
+    private int max = 10;
+    /** 
+     * Valeur pour la mort 
+     */
+    private final int mort = 0;
+        /** 
+     * Valeur pour la mort 
+     */
+    protected final Random r = new Random();
+        /** 
+     * Valeur pour la mort 
+     */
+    protected final String warrior = ("Guerrier");
+        /** 
+     * Valeur pour la mort 
+     */
+    protected final String magician = ("Magicien");
+        /** 
+     * Valeur pour la mort 
+     */
+    /** 
+     * Fonction random. Determine la force du personnage avec les attributs max et min
+     */
+    // protected static int force = r.nextInt(max - min + 1) + min;
 
     // ********************
     // Variables d'instance
     // ********************
-    private String nom = (null);
-    private String image = (null);
-    private String type = (null);
+    private String nom;
+    private String image;
+    private String type;
+    protected int life;
+    protected int force;
 
-    // ***********************
-    // Constructeur par defaut
-    // ***********************
+
+
+    /** 
+     * <b>Constructeur par defaut de Personnage</b> 
+     * 
+     * Appel le constructeur avec paramètres suivant
+     *  
+     */ 
     public Personnage() {
-        this("Conan", "conan.png", warrior, life, force);
+        this("Conan", "conan.png", "Guerrier", 0, 0);
     }
 
-    // ****************************
-    // Constructeurs avec arguments
-    // ****************************
+    /** 
+     * <b>Constructeur avec arguments de Personnage</b> 
+     * 
+     * Construit l'instance de Personnage 
+     * en initialisant "life" et "force" avec
+     * des valeurs alléatoir comprises entre "min" et "max" 
+     * 
+     * @param nom 
+     *     Nom du personnage 
+     * @param image 
+     *     Image du personnage 
+     * @param type 
+     *     Type: Guerrier ou Magicien 
+     */ 
     public Personnage(String nom, String image, String type) {
-        this(nom, image, type, life, force);
+        this(nom, image, type, 0, 0);
+        //this.life = r.nextInt(max - min + 1) + min;
+
     }
 
     public Personnage(String nom, String image, String type, int life, int force) {
         this.setNom(nom) ;
         this.setImage(image) ;
         this.setType(type) ;
-        this.setLife(life) ;
-        this.setForce(force) ;
+        this.setLife(r.nextInt(max - min + 1) + min) ;
+        this.setForce(r.nextInt(max - min + 1) + min) ;
     }
 
     // Accesseurs
