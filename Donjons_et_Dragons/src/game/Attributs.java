@@ -37,6 +37,7 @@ public class Attributs {
     private static final String fr_win = "Vous etes vainqueur !!!!!!!!!!!!!";
     private static final String fr_defat = "Vous avez perdu !!!!!!!!!!!!!";
     private static final String fr_youDead = "Vous etes mort!";
+    private static final String fr_youGo = "Appuyez sur une touche et validez-là pour avancer !";
     // Univers
     private static final String vs = "                VS";
     private static final String line = "*****************************************************";
@@ -182,6 +183,10 @@ public class Attributs {
 
         public String getVem() {
             return this.fr_youDead ;
+        }
+
+        public String getGo() {
+            return this.fr_youGo ;
         }
 
 }

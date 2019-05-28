@@ -2,11 +2,26 @@ package game;
 
 public enum Plateau {
 
-    SALLE_01 (1, "Salle N°", "La voie est libre !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513", "\u2503", " ", "\ud83d\udc68", " ", "\u2503", "\u2517", "\u2501", "\u2501", "\u2501", "\u251b", "\ud83d\udd7a"),
-    SALLE_02 (2, "Salle N°", "Rencontre avec un loup-garrou !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513", "\u2503", "\ud83d\udc7f", "\ud83d\udc68", " ", "\u2503", "\u2517", "\u2501", "\u2501", "\u2501", "\u251b", "\ud83d\udd7a"),
-    SALLE_03 (3, "Salle N°", "Vous découvrez une potion de Vie !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513", "\u2503", " ", "\ud83d\udc68", " ", "\u2503", "\u2517", "\u2501", "\u2501", "\u2501", "\u251b", "\ud83d\udd7a"),
-    SALLE_04 (4, "Salle N°", "Rencontre avec un Elf maléfique !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513", "\u2503", " ", "\ud83d\udc68", "\ud83d\udc7e", "\u2503", "\u2517", "\u2501", "\u2501", "\u2501", "\u251b", "\ud83d\udd7a"),
-    SALLE_05 (5, "Salle N°", "La lumière est au bout du tunel !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513", "\u2503", " ", "\ud83d\udc68", " ", "\u2503", "\u2517", "\u2501", "\u2501", "\u2501", "\u251b", "\ud83d\udd7a");
+    SALLE_01 (1, "Salle N°", "La voie est libre !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
+     "\u2503", " ", "\ud83d\udc68", " ", "\u2503",
+      "\u2517", "\u2501", "\u2501", "\u2501", "\u251b",
+       "\ud83d\udd7a"),
+    SALLE_02 (2, "Salle N°", "Rencontre avec un loup-garrou !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
+     "\u2503", "\ud83d\udc7f", "\ud83d\udc68", " ", "\u2503",
+      "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
+       "\ud83d\udd7a"),
+    SALLE_03 (3, "Salle N°", "Vous découvrez une potion de Vie; + 5 !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
+     "\u2503", " ", "\ud83d\udc68", " ", "\u2503",
+      "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
+       "\ud83d\udd7a"),
+    SALLE_04 (4, "Salle N°", "Rencontre avec un Elf maléfique !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
+     "\u2503", " ", "\ud83d\udc68", "\ud83d\udc7e", "\u2503",
+      "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
+       "\ud83d\udd7a"),
+    SALLE_05 (5, "Salle N°", "La lumière est au bout du tunel !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
+     "\u2503", " ", "\ud83d\udc68", " ", "\u2503",
+      "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
+       "\ud83d\udd7a");
 
     private int num;
     private String salle;
