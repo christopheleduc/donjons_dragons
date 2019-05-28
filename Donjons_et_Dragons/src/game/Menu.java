@@ -256,7 +256,7 @@ public class Menu {
 					System.out.println(constant.getVap());
 					System.out.println(constant.getLine());
 					System.out.println(constant.getLine());
-                    capture.close();
+                    //capture.close();
                     //return combattant.getLife();
 					break;
 				}
@@ -272,7 +272,7 @@ public class Menu {
 				return combattant.getLife();
 			}	
 		}
-		capture.close();
+		//capture.close();
         return combattant.getLife();
         }
 

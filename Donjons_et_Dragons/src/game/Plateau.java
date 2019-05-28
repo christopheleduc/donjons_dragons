@@ -11,7 +11,7 @@ public enum Plateau {
       "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
        "\ud83d\udd7a"),
     SALLE_03 (3, "Salle N°", "Vous découvrez une potion de Vie; + 5 !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
-     "\u2503", " ", "\ud83d\udc68", " ", "\u2503",
+     "\u2503", "\ud83c\udf7e", "\ud83d\udc68", " ", "\u2503",
       "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
        "\ud83d\udd7a"),
     SALLE_04 (4, "Salle N°", "Rencontre avec un Elf maléfique !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
@@ -19,7 +19,7 @@ public enum Plateau {
       "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
        "\ud83d\udd7a"),
     SALLE_05 (5, "Salle N°", "La lumière est au bout du tunel !", "\u250f", "\u2501", "\u21e1", "\u2501", "\u2513",
-     "\u2503", " ", "\ud83d\udc68", " ", "\u2503",
+     "\u2503", " ", "\ud83c\udfcb", " ", "\u2503",
       "\u2517", "\u2501", "\u21e1", "\u2501", "\u251b",
        "\ud83d\udd7a");
 

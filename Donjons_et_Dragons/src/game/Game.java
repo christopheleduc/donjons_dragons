@@ -65,5 +65,7 @@ public class Game {
 			System.out.println("Fin de partie");
 							
 		}
+
+		capture.close();
 	}
 }
